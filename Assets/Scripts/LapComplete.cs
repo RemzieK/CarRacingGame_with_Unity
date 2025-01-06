@@ -18,7 +18,7 @@ public class LapComplete : MonoBehaviour
 
     public GameObject RaceFinish;
 
-    public GameOverPanelManager GameOverPanelManager;  // Reference to the GameOverPanelManager
+    public GameOverPanelManager GameOverPanelManager;  
 
     private float raceTime;
 
@@ -26,34 +26,26 @@ public class LapComplete : MonoBehaviour
     {
         LapsDone += 1;
 
-        // Calculate the current lap time
         raceTime = LapTimeManager.MinuteCount * 60 + LapTimeManager.SecondCount + LapTimeManager.MiliCount / 10f;
 
-        // Update best lap time
         LapTimeManager.UpdateBestLapTime(raceTime);
 
-        // Update lap time displays
         UpdateLapDisplay();
 
-        // Reset lap time for the next lap
         ResetLapTime();
 
-        // Update lap counter
         LapCounter.text = " " + LapsDone;
 
-        // Toggle triggers
         HalfLapTrig.SetActive(true);
         LapCompleteTrig.SetActive(false);
 
-        // Check if race is complete
-        if (LapsDone >= 3)
+        if (LapsDone == 3)
         {
             RaceFinish.SetActive(true);
             LapTimeManager.RaceFinished = true;
             GameOverPanelManager.ShowGameOverPanel(raceTime);
         }
 
-        // Play finish audio
         AudioSource finishAudio = RaceFinish.GetComponent<AudioSource>();
         if (finishAudio != null)
         {

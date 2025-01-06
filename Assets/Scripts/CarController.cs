@@ -56,7 +56,6 @@ public class CarController : MonoBehaviour
         {
             carRigidBody.centerOfMass = COM.localPosition;
         }
-
     }
 
     void Update()
@@ -76,13 +75,11 @@ public class CarController : MonoBehaviour
             vertical = Input.GetAxis("Vertical");
         }
     }
-
     void CalculateCarMovement()
     {
         carSpeed = carRigidBody.velocity.magnitude;
         carSpeedConverted = Mathf.Round(carSpeed * 3.6f);
 
-        //braking
         if (Input.GetKey(KeyCode.Space))
         {
             handBrake = true;
@@ -111,7 +108,6 @@ public class CarController : MonoBehaviour
 
         ApplyMotorTorque();
     }
-
     void CalculateSteering()
     {
         float speedFactor = Mathf.Clamp01(carSpeed / maximumSpeed);
@@ -120,7 +116,6 @@ public class CarController : MonoBehaviour
         FrontWheelLeftCollider.steerAngle = tireAngle;
         FrontWheelRightCollider.steerAngle = tireAngle;
     }
-
 
     void ApplyMotorTorque()
     {
