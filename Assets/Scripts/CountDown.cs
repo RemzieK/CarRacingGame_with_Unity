@@ -41,10 +41,5 @@ public class Countdown : MonoBehaviour
         LevelMusic.Play();
         LapTimer.SetActive(true);
         CarControls.SetActive(true);
-
-       
     }
-
-
-
 }

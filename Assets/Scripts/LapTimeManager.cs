@@ -16,7 +16,7 @@ public class LapTimeManager : MonoBehaviour
 
     public static bool RaceFinished = false;
 
-    public static float BestLapTime { get; private set; } // Store the best lap time
+    public static float BestLapTime { get; private set; } 
 
     void Update()
     {
@@ -61,7 +61,7 @@ public class LapTimeManager : MonoBehaviour
     {
         if (BestLapTime == 0 || currentLapTime < BestLapTime)
         {
-            BestLapTime = currentLapTime; // Update best lap time if the current lap time is better
+            BestLapTime = currentLapTime; 
         }
     }
 }
