@@ -33,7 +33,7 @@ public class CarController : MonoBehaviour
     public WheelCollider BackWheelRightCollider;
 
     [Header("Movement, Steering and Braking")]
-    private float currentSpeed;
+    public float currentSpeed;
     public float maximumMotorTorque;
     public float maximumSteeringAngle=20f;
     public float maximumSpeed;

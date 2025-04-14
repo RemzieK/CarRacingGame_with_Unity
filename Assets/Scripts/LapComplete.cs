@@ -39,7 +39,7 @@ public class LapComplete : MonoBehaviour
         HalfLapTrig.SetActive(true);
         LapCompleteTrig.SetActive(false);
 
-        if (LapsDone == 3)
+        if (LapsDone == 1)
         {
             RaceFinish.SetActive(true);
             LapTimeManager.RaceFinished = true;
