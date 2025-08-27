@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     public float CarY;
     public float CarZ;
 
-    void Update()
+    void lateUpdate()
     {
         CarX = TheCar.transform.eulerAngles.x;
         CarY = TheCar.transform.eulerAngles.y;
