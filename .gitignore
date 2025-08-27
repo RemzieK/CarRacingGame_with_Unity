@@ -97,3 +97,7 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+Assets/ADG_Textures/ground_vol1/ground4/ground4_Height.tga
+Assets/ADG_Textures/ground_vol1/ground4/ground4_Height.tga.meta
+
